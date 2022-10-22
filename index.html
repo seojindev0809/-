@@ -1,0 +1,150 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta property="og:title" content="우리 뭐하고 놀까?" />
+    <meta property="og:description" content="주변 인기있는 맛집/코노 등등 추천해줄게!" />
+    <title>우리 뭐하고 놀까?</title>
+    <style>
+        @import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
+            * {
+                font-family: "Pretendard",serif;
+            }
+        body{
+            background-color: mediumaquamarine;
+        }
+        .wrap{
+               
+               width: 300px;
+               margin: 30px auto 0px auto;
+               display: flex;
+               flex-direction: column;
+               justify-content: center;
+               align-items: center;
+           }
+        .wrap > .mara{
+            font-size: 12px;
+                width:300px;
+                height:50px;
+                border-radius:3px;
+                background-color: white;
+                font-weight: bold;
+
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                text-decoration: none;
+                position:absolute;
+                left:50%;
+                top:65%;
+                margin-left:-150px;
+                margin-top:-300px;
+
+        }
+        .wrap > .cono{
+            font-size: 12px;
+                width:300px;
+                height:50px;
+                border-radius:3px;
+                background-color: white;
+                font-weight: bold;
+
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                text-decoration: none;
+                position:absolute;
+                left:50%;
+                top:65%;
+                margin-left:-150px;
+                margin-top:-230px;
+
+        }
+        .wrap > .lifeshot{
+            font-size: 12px;
+                width:300px;
+                height:50px;
+                border-radius:3px;
+                background-color: white;
+                font-weight: bold;
+
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                text-decoration: none;
+                position:absolute;
+                left:50%;
+                top:65%;
+                margin-left:-150px;
+                margin-top:-160px;
+
+        }
+        .wrap > .escape{
+            font-size: 12px;
+                width:300px;
+                height:50px;
+                border-radius:3px;
+                background-color: white;
+                font-weight: bold;
+
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                text-decoration: none;
+                position:absolute;
+                left:50%;
+                top:65%;
+                margin-left:-150px;
+                margin-top:-90px;
+
+        }
+        .logo{
+            width: 300px;
+            height: 300px;
+
+            border-radius: 100%;
+
+            background-image: url("logo.png");
+            background-position: center;
+            background-size: cover;
+        }
+        iframe{
+            display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                text-decoration: none;
+                position:absolute;
+                left:50%;
+                top:65%;
+                margin-left:-150px;
+                margin-top:-10px;
+        }
+    </style>
+</head>
+
+<body>
+    <script type = "text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=발급받은 APP KEY를 넣으시면 됩니다.">
+        function marabutton(){
+            <div id="map" style="width:500px;height:400px;"></div>
+
+        }
+    </script>
+    <div class = "wrap">
+        <div class = "logo">
+        </div>
+        <button class = "mara" type = "button" onclick="marabutton()">마라탕</button>
+        <button class = "cono" type = "button" onclick="conobutton()">코인노래방</button>
+        <button class = "lifeshot" type = "button" onclick="lifebutton()">인생네컷</button>
+        <button class = "escape" type = "button" onclick="escabutton()">방탈출</button>
+</body>
+    </div>
+    
+</html>
