@@ -115,36 +115,36 @@
             background-position: center;
             background-size: cover;
         }
-        iframe{
-            display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
-                text-decoration: none;
-                position:absolute;
-                left:50%;
-                top:65%;
-                margin-left:-150px;
-                margin-top:-10px;
-        }
+    
+
     </style>
 </head>
 
 <body>
-    <script type = "text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=발급받은 APP KEY를 넣으시면 됩니다.">
-        function marabutton(){
-            <div id="map" style="width:500px;height:400px;"></div>
-
-        }
-    </script>
+    
     <div class = "wrap">
         <div class = "logo">
         </div>
-        <button class = "mara" type = "button" onclick="marabutton()">마라탕</button>
-        <button class = "cono" type = "button" onclick="conobutton()">코인노래방</button>
-        <button class = "lifeshot" type = "button" onclick="lifebutton()">인생네컷</button>
-        <button class = "escape" type = "button" onclick="escabutton()">방탈출</button>
+        <button class = "mara" type = "button" id = "btn1">마라탕</button>
+        <button class = "cono" type = "button" id = "btn2">코인노래방</button>
+        <button class = "lifeshot" type = "button" id = "btn3">인생네컷</button>
+        <button class = "escape" type = "button" id = "btn4">방탈출</button>
+        <div class = "maramap" id="map" style="width:500px;height:400px;"></div>
+        <script type = "text/javascript" src="https://dapi.kakao.com/v2/maps/sdk.js?appkey=3efbfa404cd3d1580b904f39492f5c5f">
+            document.getElementById("btn1").addEventListener('click',bt1);
+            function bt1(){
+                var container = document.getElementById('map');
+                var options = {
+                    center: new kakao.maps.LatLng(33.450701, 126.570667),
+                    level: 3
+                };
+
+                var map = new kakao.maps.Map(container, options);
+                    }
+
+        </script>
+
 </body>
-    </div>
+
     
 </html>
