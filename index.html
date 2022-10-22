@@ -4,8 +4,8 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta property="og:title" content="우리 뭐하고 놀까?" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
     <meta property="og:description" content="주변 인기있는 맛집/코노 등등 추천해줄게!" />
     <title>우리 뭐하고 놀까?</title>
     <style>
@@ -116,32 +116,37 @@
             background-size: cover;
         }
     
-
+        .maramap{
+            position: absolute;
+            margin-top: -45px;
+            margin-left: -150px;
+        }
     </style>
 </head>
 
 <body>
-    
+    <div class="maramap" id="map" style="width:500px;height:400px;"></div>
     <div class = "wrap">
         <div class = "logo">
         </div>
-        <button class = "mara" type = "button" id = "btn1">마라탕</button>
+        <button class = "mara" onclick  = "bt1()">마라탕</button>
         <button class = "cono" type = "button" id = "btn2">코인노래방</button>
         <button class = "lifeshot" type = "button" id = "btn3">인생네컷</button>
         <button class = "escape" type = "button" id = "btn4">방탈출</button>
         <div class = "maramap" id="map" style="width:500px;height:400px;"></div>
-        <script type = "text/javascript" src="https://dapi.kakao.com/v2/maps/sdk.js?appkey=	2ecb3805f30e34f8c53aff582b7d8500">
-            document.getElementById("btn1").addEventListener('click',bt1);
-            function bt1(){
-                var container = document.getElementById('map');
-                var options = {
-                    center: new kakao.maps.LatLng(33.450701, 126.570667),
-                    level: 3
-                };
+        <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=3efbfa404cd3d1580b904f39492f5c5f"></script>
+        
+        <script>
+            function bt1() {
+                var container = document.getElementById('map'); //지도를 담을 영역의 DOM 레퍼런스
+                        var options = { //지도를 생성할 때 필요한 기본 옵션
+                            center: new kakao.maps.LatLng(33.450701, 126.570667), //지도의 중심좌표.
+                            level: 3 //지도의 레벨(확대, 축소 정도)
+                        };
 
-                var map = new kakao.maps.Map(container, options);
-                    }
-
+                        var map = new kakao.maps.Map(container, options); //지도 생성 및 객체 리턴
+        }  
+            
         </script>
 
 </body>
